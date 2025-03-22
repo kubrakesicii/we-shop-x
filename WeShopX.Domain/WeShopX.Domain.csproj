@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="CustomerManagement\" />
+    <Folder Include="MarketingManagement\" />
+    <Folder Include="OrderManagement\" />
+    <Folder Include="VendorManagement\Entities\" />
+  </ItemGroup>
+
 </Project>
