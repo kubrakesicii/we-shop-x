@@ -6,21 +6,24 @@ namespace WeShopX.Domain.ProductManagement
 {
     public class Product : AggregateRoot<ProductId>
     {
-        public Product(ProductId id, string name, string description, Price price, CategoryId categoryId, BrandId brandId,
+        public Product(ProductId id, string name, string description, string detail,Price price, CategoryId categoryId, BrandId brandId,
             string imageUrl) : base(id)
         {
             Name = name;
             Description = description;
+            Detail = detail;
             Price = price;
             CategoryId = categoryId;
             BrandId = brandId;
             ImageUrl = imageUrl;
 
-            ProductReviews = _ProductReviews.AsReadOnly().ToList();
+            ProductReviews = _productReviews.AsReadOnly().ToList();
+            ProductFeatures = _productFeatures.AsReadOnly().ToList();
         }
 
         public string Name { get;private set; }
         public string Description { get; private set; }
+        public string Detail { get; private set; }
         public Price Price { get; private set; }
 
         /// <summary>
@@ -34,7 +37,10 @@ namespace WeShopX.Domain.ProductManagement
         public StockId StockId { get; private set; }
         public string ImageUrl { get; private set; }
 
-        private readonly List<ProductReview> _ProductReviews = new();
+        private readonly List<ProductReview> _productReviews = new();
         public IReadOnlyList<ProductReview> ProductReviews { get; private set; }
+
+        private readonly List<ProductFeature> _productFeatures = new();
+        public IReadOnlyList<ProductFeature> ProductFeatures { get; private set; }    
     }
 }

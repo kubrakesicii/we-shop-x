@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CustomerManagement\" />
     <Folder Include="MarketingManagement\" />
-    <Folder Include="OrderManagement\" />
     <Folder Include="VendorManagement\Entities\" />
   </ItemGroup>
 
