@@ -1,0 +1,6 @@
+@WeShopX.API_HostAddress = http://localhost:5229
+
+GET {{WeShopX.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
