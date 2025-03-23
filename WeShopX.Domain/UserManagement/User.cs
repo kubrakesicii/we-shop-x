@@ -1,6 +1,6 @@
 ﻿using WeShopX.Domain.Common;
-using WeShopX.Domain.OrderManagement;
-using WeShopX.Domain.ProductManagement;
+using WeShopX.Domain.OrderManagement.ValueObjects;
+using WeShopX.Domain.ProductManagement.ValueObjects;
 using WeShopX.Domain.UserManagement.Entities;
 using WeShopX.Domain.UserManagement.ValueObjects;
 
@@ -9,7 +9,7 @@ namespace WeShopX.Domain.UserManagement
     public class User : AggregateRoot<UserId>
     {
 
-        public User(UserId id,string firstname, string lastname, string email, string mobileNo, float weight, float height) : base(id)
+        public User(UserId id,string firstname, string lastname, Email email, MobileNo mobileNo, float weight, float height) : base(id)
         {
             Firstname = firstname;
             Lastname = lastname;
@@ -32,8 +32,8 @@ namespace WeShopX.Domain.UserManagement
         public float Height { get; private set; }
         public ShoppingCart Cart { get; private set; }
 
-        private readonly List<Product> _favoriteProducts = new();
-        public IReadOnlyList<Product> FavoriteProducts { get; private set; }
+        private readonly List<ProductId> _favoriteProducts = new();
+        public IReadOnlyList<ProductId> FavoriteProducts { get; private set; }
 
         private readonly List<Address> _savedAddresses = new();
         public IReadOnlyList<Address> SavedAddresses { get; private set; }
@@ -41,8 +41,8 @@ namespace WeShopX.Domain.UserManagement
         private readonly List<LoyaltyPoint> _loyaltyPoints = new();
         public IReadOnlyList<LoyaltyPoint> LoyaltyPoints { get; private set; }
 
-        private readonly List<Order> _orders = new();
-        public IReadOnlyList<Order> Orders { get; private set; }
+        private readonly List<OrderId> _orders = new();
+        public IReadOnlyList<OrderId> Orders { get; private set; }
 
 
         //private readonly List<Coupos> _coupons = new();

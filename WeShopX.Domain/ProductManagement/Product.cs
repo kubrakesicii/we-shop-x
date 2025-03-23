@@ -1,4 +1,5 @@
-﻿using WeShopX.Domain.Common;
+﻿using WeShopX.Domain.CategoryManagement.ValueObjects;
+using WeShopX.Domain.Common;
 using WeShopX.Domain.ProductManagement.Entities;
 using WeShopX.Domain.ProductManagement.ValueObjects;
 
@@ -32,7 +33,7 @@ namespace WeShopX.Domain.ProductManagement
         /// If Category is simpler and doesn't require independent management, it might be better to treat it as
         /// a value object or a foreign key reference.
         /// </summary>
-        public CategoryId CategoryId { get; private set; }
+        public SubCategoryId CategoryId { get; private set; }  // ✅ Links to SubCategory, NOT Category
         public BrandId BrandId { get; private set; }
         public StockId StockId { get; private set; }
         public string ImageUrl { get; private set; }
