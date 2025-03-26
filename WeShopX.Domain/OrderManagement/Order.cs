@@ -1,5 +1,4 @@
 ﻿using WeShopX.Domain.Common;
-using WeShopX.Domain.MarketingManagement;
 using WeShopX.Domain.MarketingManagement.ValueObjects;
 using WeShopX.Domain.OrderManagement.Entities;
 using WeShopX.Domain.OrderManagement.ValueObjects;

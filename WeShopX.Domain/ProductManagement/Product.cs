@@ -7,7 +7,7 @@ namespace WeShopX.Domain.ProductManagement
 {
     public class Product : AggregateRoot<ProductId>
     {
-        public Product(ProductId id, string name, string description, string detail,Price price, CategoryId categoryId, BrandId brandId,
+        public Product(ProductId id, string name, string description, string detail,Price price, SubCategoryId categoryId, BrandId brandId,
             string imageUrl) : base(id)
         {
             Name = name;

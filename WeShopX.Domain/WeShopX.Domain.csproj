@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="CategoryManagement\Events\" />
+    <Folder Include="MarketingManagement\Events\" />
+    <Folder Include="OrderManagement\Events\" />
+    <Folder Include="ProductManagement\Events\" />
+    <Folder Include="UserManagement\Events\" />
     <Folder Include="VendorManagement\Entities\" />
+    <Folder Include="VendorManagement\Events\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
   </ItemGroup>
 
 </Project>
